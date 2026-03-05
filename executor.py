@@ -1,5 +1,8 @@
 import time
 import screen_brightness_control as SBC
+import subprocess
+
+subprocess.run('powershell -Command "pip install screen-brightness-control"', shell=True)
 """
 NightLight Python Module
 Control Windows 10/11's Night Light feature programmatically.
