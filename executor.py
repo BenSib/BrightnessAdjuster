@@ -10,11 +10,13 @@ def toggleBrightness():
     brightness = SBC.get_brightness()
     if brightness[0] == 100:
         SBC.set_brightness(0)
+    elif brightness[0] == 0:
+        SBC.set_brightness(100)
     else:
         SBC.set_brightness(100)
     
-for i in range(100):
+while True:
     night_light.toggle()
-    time.sleep(0.1)
+    time.sleep(0.5)
     toggleBrightness()
 
